@@ -28,6 +28,7 @@ while True:
      # the receipt
     (rpiName, frame) = imageHub.recv_image()
     imageHub.send_reply(b'OK')
+    print("PASS")
        # if a device is not in the last active dictionary then it means
        # that its a newly connected device
     if rpiName not in lastActive.keys():
@@ -37,7 +38,6 @@ while True:
     lastActive[rpiName] = datetime.now()
     # resize the frame to have a maximum width of 400 pixels, then
         # grab the frame dimensions and construct a blob
-    frame = imutils.resize(frame, width=400)
     (h, w) = frame.shape[:2]
     # update the new frame in the frame dictionary
     frameDict[rpiName] = frame
