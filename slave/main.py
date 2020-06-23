@@ -16,7 +16,7 @@ rpiName = socket.gethostname()
 if DEBUG:
 	print("Got Hostname: ", rpiName)
 
-vs = VideoStream(usePiCamera=True).start
+vs = VideoStream(usePiCamera=True).start()
 #stream = VideoStream(src=0).start
 time.sleep(2.0)
 
