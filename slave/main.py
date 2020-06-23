@@ -24,6 +24,9 @@ while True:
 	if DEBUG:
 		print("Sending....")
 	frame =vs.read()
-	sender.send_image(rpiName, frame)
+	if frame is not None:
+		sender.send_image(rpiName, frame)
+	else:
+    	print("No frame to send {}".format(time.time()))
 	if DEBUG:
 		print("Sent!")
