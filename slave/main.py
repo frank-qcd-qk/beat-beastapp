@@ -21,6 +21,8 @@ vs = VideoStream(usePiCamera=True).start()
 time.sleep(2.0)
 
 while True:
+	if DEBUG:
+		print("Sending....")
 	frame =vs.read()
 	sender.send_image(rpiName, frame)
 	if DEBUG:
