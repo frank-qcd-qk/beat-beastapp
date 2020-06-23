@@ -19,8 +19,8 @@ ACTIVE_CHECK_PERIOD = 1
 ACTIVE_CHECK_SECONDS = ESTIMATED_NUM_PIS * ACTIVE_CHECK_PERIOD
 # assign montage width and height so we can view all incoming frames
 # in a single "dashboard"
-mW = 640
-mH = 480
+mW = 2
+mH = 2
 # start looping over all the frames
 while True:
     print("heartbeat!")
